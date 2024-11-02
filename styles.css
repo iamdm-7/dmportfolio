@@ -1,0 +1,181 @@
+/* Colors and Fonts */
+:root {
+    --background: #1b1b1b;
+    --text-color: #e0e0e0;
+    --heading-color: #ff9800;
+    --primary-color: #ff6b6b;
+    --secondary-color: #4e4b8b;
+    --accent-color: #f0c987;
+    --white: #ffffff;
+    --sidebar-bg: #2c2c2c;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* General Styling */
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #1b1b1b, #2c2c2c);
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 60px;
+}
+
+/* Global Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--heading-color);
+}
+
+/* Sidebar Styling */
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    color: var(--white);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#sidebar h3 {
+    color: var(--text-color);
+    font-size: 1.8em;
+}
+
+/* Sidebar Navigation Links */
+.sidebar-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar-nav a:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Main Content Area */
+#content {
+    margin-left: 270px; /* Sidebar width + gap */
+    padding: 20px;
+}
+
+/* Hero Section with Glassmorphism */
+#hero {
+    text-align: center;
+    background: var(--glass-bg);
+    color: var(--white);
+    padding: 80px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    margin-top: 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    color: var(--heading-color);
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.hero-buttons a {
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero-buttons a:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: scale(1.1);
+}
+
+/* Section with Glassmorphism */
+section {
+    background: var(--glass-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    margin: 20px 0;
+}
+
+/* Resume PDF Viewer */
+.pdf-viewer iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Button and Link Hover Animation */
+.hero-buttons a:hover, .sidebar-nav a:hover, .navbar a:hover {
+    animation: hover-scale 0.2s forwards;
+}
+
+/* Keyframes */
+@keyframes hover-scale {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}

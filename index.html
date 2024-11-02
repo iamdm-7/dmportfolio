@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daksh Malhotra | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Global Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" data-aos="slide-right" data-aos-duration="1200">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+            <h3>Daksh Malhotra</h3>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div id="content">
+        <!-- Hero Section -->
+        <section id="hero" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>Hi, I'm Daksh Malhotra</h1>
+            <p>B.Tech Student | Full-Stack Developer | Web3 & DevOps Enthusiast</p>
+            <div class="hero-buttons">
+                <a href="resume.html" class="button">View My Resume</a>
+                <a href="contact.html" class="button">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" data-aos="fade-up" data-aos-duration="1000">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate full-stack developer with a background in engineering, enthusiastic about web development, DevOps, and the potential of blockchain technology. 
+                I thrive in creating meaningful, user-friendly digital experiences.
+            </p>
+        </section>
+    </div>
+
+    <!-- Load the Navigation Bar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>

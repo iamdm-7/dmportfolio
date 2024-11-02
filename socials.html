@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socials | Daksh Malhotra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <section id="socials" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Socials</h2>
+            <ul>
+                <li><a href="https://github.com/yourprofile" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                <!-- Add more social links as needed -->
+            </ul>
+        </section>
+    </div>
+
+    <!-- Load the Navigation Bar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
